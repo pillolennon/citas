@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterMainActivity2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/barberia_background">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:layout_marginLeft="30dp"
+            android:text="Registro de usuario"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-black"
+            android:textColor="@color/title"
+            android:textSize="35sp"/>
+
+        <EditText
+            android:id="@+id/txtEmail"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginRight="25dp"
+            android:background="@drawable/edittex_custom"
+            android:hint="Correo electrónico"
+            android:inputType="textEmailAddress"
+            android:padding="15dp"
+            android:textColor="@android:color/black"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/txtPassword"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="25dp"
+            android:background="@drawable/edittex_custom"
+            android:hint="Contraseña"
+            android:inputType="textPassword"
+            android:padding="15dp"
+            android:textColor="@android:color/black"
+            android:textSize="15sp" />
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="bottom"
+        android:gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/btnRegistrarse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:backgroundTint="@color/btnIniciarSesionColor"
+            android:text="Registrarse" />
+
+        <TextView
+            android:id="@+id/tv_go_to_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Volver al inicio de sesión"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif"
+            android:background="@drawable/edittex_custom"
+            android:padding="5dp"
+            android:layout_marginBottom="300dp" />
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
