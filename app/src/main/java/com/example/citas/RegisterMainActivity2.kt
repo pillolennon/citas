@@ -33,7 +33,13 @@ class RegisterMainActivity2 : AppCompatActivity() {
         btnRegistrarse.setOnClickListener {
             val email = txtEmail.text.toString()
             val password = txtPassword.text.toString()
-            registrarUsuario(email, password)
+
+            // Verificar si los campos de correo electrónico y contraseña están vacíos
+            if (email.isEmpty() || password.isEmpty()) {
+                Toast.makeText(this, "Por favor, completa todos los campos", Toast.LENGTH_SHORT).show()
+            } else {
+                registrarUsuario(email, password)
+            }
         }
 
         // Variable para volver al login

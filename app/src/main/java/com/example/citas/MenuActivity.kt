@@ -11,6 +11,7 @@ class MenuActivity : AppCompatActivity() {
 
 
     private lateinit var btnCerrarSesion: Button
+    private lateinit var btnReservarCita: Button
     private lateinit var auth: FirebaseAuth
 
 
@@ -23,6 +24,19 @@ class MenuActivity : AppCompatActivity() {
 
         //OBTENER REFERENCIA DEL BOTON CERRAR SESION
         btnCerrarSesion = findViewById(R.id.btnCerrarSesion)
+
+        //OBTENER REFERENCIA DEL BOTON RESERVAR CITA
+        btnReservarCita = findViewById(R.id.btnReservarCita)
+        //CONFIGURAR CLIC EN EL BOTON RESERVAR CITA
+        btnReservarCita.setOnClickListener{
+            goToRegistrarCita()
+        }
+
+
+
+
+
+
 
         //CONFIGURAR CLIC EN EL BOTON DE CIERRE DE SESION
         btnCerrarSesion.setOnClickListener{
@@ -43,5 +57,10 @@ class MenuActivity : AppCompatActivity() {
         val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
         finish()
+    }
+    //FUNCION PARA REGISTRAR CITA
+   private fun goToRegistrarCita(){
+        val  intent = Intent(this, RegistrarCita::class.java)
+        startActivity(intent)
     }
 }

@@ -40,15 +40,25 @@ class MainActivity : AppCompatActivity() {
         btnLogin.setOnClickListener {
             val email = txtEmail.text.toString()
             val password = txtPassword.text.toString()
-            signIn(email, password)
+
+            // Verificar si los campos están vacíos
+            if (email.isEmpty() || password.isEmpty()) {
+                // Mostrar un mensaje al usuario para llenar todos los campos
+                Toast.makeText(this, "Por favor, completa todos los campos", Toast.LENGTH_SHORT).show()
+            } else {
+                // Si los campos no están vacíos, intentar iniciar sesión
+                signIn(email, password)
+            }
         }
     }
+
     //FUNCION PARA IR AL REGISTRO DE USUARIOS
     private fun goToRegister(){
         val intent = Intent(this, RegisterMainActivity2::class.java)
         startActivity(intent)
         finish()
     }
+
     private fun signIn(email: String, password: String) {
         // Autenticar el usuario con correo electrónico y contraseña
         auth.signInWithEmailAndPassword(email, password)
@@ -60,7 +70,6 @@ class MainActivity : AppCompatActivity() {
                     val i = Intent(this, MenuActivity::class.java)
                     startActivity(i)
                     finish()
-
                 } else {
                     // Error al iniciar sesión
                     if (task.exception?.message == "La dirección de correo electrónico no es correcta.") {
@@ -87,35 +96,5 @@ class MainActivity : AppCompatActivity() {
                     }
                 }
             }
-
-        }
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Variable "Crear cuenta"
-        //val tvGoRegister = findViewById<TextView>(R.id.tv_go_to_register)
-        //tvGoRegister.setOnClickListener {
-           // goToRegister()
-        //}
-    //}
-
-    // Método para ir a la actividad de registro
-    //private fun goToRegister() {
-      //  val intent = Intent(this, RegisterMainActivity2::class.java)
-        //startActivity(intent)
+}
