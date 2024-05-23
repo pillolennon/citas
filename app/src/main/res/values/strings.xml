@@ -3,4 +3,5 @@
 
     <string name="tv_fecha">00/00/0000</string>
     <string name="btn_seleccionar">Seleccionar Fecha</string>
+    <string name="tvSelectedTime">00-00</string>
 </resources>

@@ -21,7 +21,7 @@
             android:text="Registrar Cita"
             android:textStyle="bold"
             android:fontFamily="sans-serif-black"
-            android:textColor="@color/title"
+            android:textColor="@color/black"
             android:textSize="35sp"/>
 
 
@@ -70,7 +70,7 @@
             android:layout_marginTop="5dp"
             android:layout_marginLeft="25dp"
             style="@style/ButtonNoRound"
-            android:drawableLeft="@drawable/citas"
+            android:drawableLeft="@drawable/ic_calendario"
             android:layout_centerInParent="true"/>
 
         <TextView
@@ -86,6 +86,47 @@
             android:fontFamily="times new roman"
             android:layout_marginTop="-40dp" />
 
+        <!-- BOTON PARA SELECCIONAR LA HORA -->
+        <Button
+            android:id="@+id/btnPickTime"
+            style="@style/ButtonNoRound"
+            android:layout_width="196dp"
+            android:layout_height="55dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="25sp"
+            android:layout_marginTop="20dp"
+            android:drawableLeft="@drawable/ic_reloj"
+            android:text="Seleccionar Hora" />
+
+        <TextView
+            android:id="@+id/tvSelectedTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            android:textSize="20dp"
+            android:background="@color/title"
+            android:textColor="@color/white"
+            android:layout_marginLeft="235dp"
+            android:textStyle="bold"
+            android:fontFamily="times new roman"
+            android:layout_marginTop="-40dp"
+            android:layout_below="@id/btnPickTime"
+            android:layout_centerHorizontal="true" />
+
+
+        <EditText
+            android:id="@+id/txtComentario"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="25dp"
+            android:background="@drawable/edittex_custom"
+            android:hint="Comentarios Extras"
+            android:inputType="text"
+            android:padding="15dp"
+            android:textColor="@android:color/black"
+            android:textSize="15sp" />
 
 
         <!--<DatePicker
@@ -118,8 +159,9 @@
             android:layout_marginLeft="25dp"
             android:layout_marginRight="25dp"
             android:layout_marginTop="470dp"
+            android:drawableRight="@drawable/ic_confirmar"
             android:backgroundTint="@color/btnIniciarSesionColor"
-            android:text="SIGUIENTE" />
+            android:text="CONFIRMAR CITA" />
 
 
     </LinearLayout>
